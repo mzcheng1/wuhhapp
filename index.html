@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="WUHHU — your crew's private space to connect, share, and move together.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>WUHHU — Crew space</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#home" aria-label="WUHHU home">WUHHU<span>®</span></a>
+      <button class="avatar" aria-label="Open your profile">J</button>
+    </header>
+
+    <section class="welcome" id="home">
+      <div class="eyebrow"><span class="live-dot"></span> PRIVATE CREW SPACE</div>
+      <h1>What’s good,<br><em>Jay.</em></h1>
+      <p>Your people. Your moves. All in one place.</p>
+    </section>
+
+    <nav class="tabs" aria-label="Main navigation">
+      <button class="tab active" data-view="feed">The Feed</button>
+      <button class="tab" data-view="chat">Chat <span class="unread">2</span></button>
+      <button class="tab" data-view="videos">Videos</button>
+    </nav>
+
+    <section class="view" id="feed-view">
+      <div class="section-heading"><h2>CREW TALK</h2><button class="text-button" id="new-post">＋ Post</button></div>
+      <article class="composer">
+        <div class="mini-avatar coral">J</div>
+        <button class="composer-prompt" id="compose-prompt">Drop something for the crew...</button>
+        <button class="attach" aria-label="Attach a video">↗</button>
+      </article>
+
+      <article class="post-card">
+        <div class="post-head"><div class="mini-avatar lime">M</div><div><strong>Maya</strong><span>Today · 10:42 AM</span></div><button class="more" aria-label="More options">···</button></div>
+        <p>Last night was a whole different level 🔥 Proud of everybody. Same time Thursday?</p>
+        <div class="post-media rehearsal"><div class="play">▶</div><span>REHEARSAL / 0:34</span></div>
+        <div class="post-actions"><button class="react">♡ <span>12</span></button><button class="comment">☰ <span>3 replies</span></button><button class="share">↗</button></div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-head"><div class="mini-avatar blue">D</div><div><strong>Dez</strong><span>Yesterday · 8:16 PM</span></div><button class="more" aria-label="More options">···</button></div>
+        <p>New set idea for the showcase. Tell me what you think 👀</p>
+        <div class="post-actions"><button class="react">♡ <span>8</span></button><button class="comment">☰ <span>5 replies</span></button><button class="share">↗</button></div>
+      </article>
+    </section>
+
+    <section class="view hidden" id="chat-view">
+      <div class="section-heading"><h2>THE GROUP CHAT</h2><span class="online">● 4 here now</span></div>
+      <div class="chat-list">
+        <article class="message"><div class="mini-avatar lime">M</div><div><div class="message-meta"><strong>Maya</strong><time>10:42</time></div><p>Practice Thursday at 7? I found a studio ✨</p></div></article>
+        <article class="message"><div class="mini-avatar blue">D</div><div><div class="message-meta"><strong>Dez</strong><time>10:45</time></div><p>I'm in. Send the address</p></div></article>
+        <article class="message mine"><div class="mini-avatar coral">J</div><div><div class="message-meta"><strong>You</strong><time>10:49</time></div><p>Bet, I’ll be there 💯</p></div></article>
+      </div>
+      <form class="chat-compose" id="chat-form"><input id="chat-input" placeholder="Message the crew..." aria-label="Message the crew"><button aria-label="Send message">↑</button></form>
+      <p class="demo-note">Preview messages are just examples.</p>
+    </section>
+
+    <section class="view hidden" id="videos-view">
+      <div class="section-heading"><h2>CLIP LIBRARY</h2><button class="text-button" id="upload-video">＋ Add clip</button></div>
+      <p class="subhead">Moves, moments, and works in progress.</p>
+      <article class="video-tile rehearsal"><div class="play">▶</div><div class="video-caption"><strong>Thursday run-through</strong><span>Maya · 0:34 · Today</span></div></article>
+      <article class="video-tile studio"><div class="play">▶</div><div class="video-caption"><strong>New set idea</strong><span>Dez · Yesterday</span></div></article>
+      <p class="demo-note">Video uploads will be enabled when WUHHU is connected to private storage.</p>
+    </section>
+
+    <footer><span>WUHHU © 2026</span><span>BUILT FOR THE CREW</span></footer>
+  </main>
+  <dialog id="post-dialog"><form method="dialog" class="dialog-card"><button class="close" aria-label="Close">×</button><div class="eyebrow">SAY IT WITH YOUR CHEST</div><h2>Drop a post</h2><textarea id="post-text" placeholder="What’s on your mind, Jay?" rows="4"></textarea><div class="dialog-actions"><span>🔒 Crew only</span><button class="primary" id="publish-post">Post it ↗</button></div></form></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
