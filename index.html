@@ -13,12 +13,13 @@
   <main class="app-shell">
     <header class="topbar">
       <a class="wordmark" href="#home" aria-label="WUHHU home">WUHHU<span>®</span></a>
-      <button class="avatar" aria-label="Open your profile">J</button>
+      <button class="avatar" aria-label="Your profile">J</button>
     </header>
 
+    <input id="video-file" type="file" accept="video/*" hidden>
     <section class="welcome" id="home">
-      <div class="eyebrow"><span class="live-dot"></span> PRIVATE CREW SPACE</div>
-      <h1>What’s good,<br><em>Jay.</em></h1>
+      <div class="eyebrow"><span class="live-dot"></span> WUHHU · APP PREVIEW</div>
+      <h1>What’s good,<br><em>crew.</em></h1>
       <p>Your people. Your moves. All in one place.</p>
     </section>
 
@@ -58,7 +59,7 @@
         <article class="message mine"><div class="mini-avatar coral">J</div><div><div class="message-meta"><strong>You</strong><time>10:49</time></div><p>Bet, I’ll be there 💯</p></div></article>
       </div>
       <form class="chat-compose" id="chat-form"><input id="chat-input" placeholder="Message the crew..." aria-label="Message the crew"><button aria-label="Send message">↑</button></form>
-      <p class="demo-note">Preview messages are just examples.</p>
+      <p class="demo-note">Prototype messages are saved in this browser only.</p>
     </section>
 
     <section class="view hidden" id="videos-view">
@@ -66,13 +67,13 @@
       <p class="subhead">Moves, moments, and works in progress.</p>
       <article class="video-tile rehearsal"><div class="play">▶</div><div class="video-caption"><strong>Thursday run-through</strong><span>Maya · 0:34 · Today</span></div></article>
       <article class="video-tile studio"><div class="play">▶</div><div class="video-caption"><strong>New set idea</strong><span>Dez · Yesterday</span></div></article>
-      <p class="demo-note">Video uploads will be enabled when WUHHU is connected to private storage.</p>
+      <p class="demo-note">Uploaded clips preview on this device only for now.</p>
     </section>
 
-    <footer><span>WUHHU © 2026</span><span>BUILT FOR THE CREW</span></footer>
+    <footer><span>WUHHU · LOCAL PREVIEW</span><span>BUILT FOR THE CREW</span></footer>
   </main>
-  <dialog id="post-dialog"><form method="dialog" class="dialog-card"><button class="close" aria-label="Close">×</button><div class="eyebrow">SAY IT WITH YOUR CHEST</div><h2>Drop a post</h2><textarea id="post-text" placeholder="What’s on your mind, Jay?" rows="4"></textarea><div class="dialog-actions"><span>🔒 Crew only</span><button class="primary" id="publish-post">Post it ↗</button></div></form></dialog>
+  <dialog id="post-dialog"><form method="dialog" class="dialog-card"><button class="close" aria-label="Close">×</button><div class="eyebrow">SAY IT WITH YOUR CHEST</div><h2>Drop a post</h2><textarea id="post-text" placeholder="What’s on your mind?" rows="4"></textarea><div class="dialog-actions"><span>Saved in this browser</span><button class="primary" id="publish-post">Post it ↗</button></div></form></dialog>
   <div class="toast" id="toast" role="status"></div>
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
